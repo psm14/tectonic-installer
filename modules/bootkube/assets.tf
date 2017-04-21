@@ -11,6 +11,9 @@ resource "template_folder" "bootkube" {
     dnsmasq_metrics_image  = "${var.container_images["dnsmasq_metrics"]}"
     exechealthz_image      = "${var.container_images["exechealthz"]}"
     flannel_image          = "${var.container_images["flannel"]}"
+    calico_node_image      = "${var.container_images["calico_node"]}"
+    calico_cni_image       = "${var.container_images["calico_cni"]}"
+    calico_policy_image    = "${var.container_images["calico_policy"]}"
 
     etcd_servers   = "${join(",", var.etcd_servers)}"
     cloud_provider = "${var.cloud_provider}"
