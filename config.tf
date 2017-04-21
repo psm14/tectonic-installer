@@ -40,6 +40,9 @@ variable "tectonic_container_images" {
     flannel                      = "quay.io/coreos/flannel:v0.7.1-amd64"
     etcd                         = "quay.io/coreos/etcd:v3.1.6"
     awscli                       = "quay.io/coreos/awscli:025a357f05242fdad6a81e8a6b520098aa65a600"
+    calico_node                  = "quay.io/calico/node:v0.23.0"
+    calico_cni                   = "quay.io/calico/cni:v1.5.2"
+    calico_policy                = "calico/kube-policy-controller:v0.4.0"
   }
 }
 

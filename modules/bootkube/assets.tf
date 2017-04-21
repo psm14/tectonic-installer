@@ -25,6 +25,9 @@ resource "template_dir" "bootkube" {
     kubednsmasq_image      = "${var.container_images["kubednsmasq"]}"
     kubedns_sidecar_image  = "${var.container_images["kubedns_sidecar"]}"
     flannel_image          = "${var.container_images["flannel"]}"
+    calico_node_image      = "${var.container_images["calico_node"]}"
+    calico_cni_image       = "${var.container_images["calico_cni"]}"
+    calico_policy_image    = "${var.container_images["calico_policy"]}"
 
     etcd_servers   = "${data.null_data_source.etcd.outputs.no_certs ? "http://127.0.0.1:2379" : join(",", formatlist("https://%s:2379", var.etcd_endpoints))}"
     etcd_ca_flag   = "${data.null_data_source.etcd.outputs.ca_flag}"
